@@ -1,4 +1,6 @@
 .site-navigation {
+  margin-right: auto;
+
   &__list {
     display: flex;
     flex-wrap: wrap;
@@ -46,7 +48,7 @@
     .normal-font(14px);
     box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
     color: @gray-dark;
-    background-color: @light;
+    background-color: @gray-lighter;
     min-width: 145px;
     border-radius: 5px;
     visibility: hidden;
@@ -75,6 +77,22 @@
     }
   }
 
+  &__submenu-item--mark > a {
+    position: relative;
+    font-weight: 700;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      bottom: 0;
+      right: 10px;
+      height: 1px;
+      width: calc(100% - 20px);
+      background-color: @gray-light;
+    }
+  }
+
   &__item:hover > .site-navigation__submenu-list,
   &__item:focus-within > .site-navigation__submenu-list,
   &__item > .site-navigation__submenu-list:hover {
@@ -87,7 +105,7 @@
   &__item:focus-within {
     & > a {
       color: @gray-dark;
-      background-color: @light;
+      background-color: @gray-lighter;
       outline: none;
 
       &::before {
