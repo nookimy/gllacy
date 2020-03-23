@@ -1,0 +1,35 @@
+.user-link {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__search,
+  &__login,
+  &__basket {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+  }
+
+  &__search {
+    width: 41px;
+    background-image: url("../img/user-link/search-white.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &__login,
+  &__basket {
+    padding: 10px 15px 10px 45px;
+  }
+
+  &__search:hover,
+  &__login:hover,
+  &__basket:hover {
+    background-color: rgba(255, 255, 255, 1);
+    color: @dark;
+  }
+
+  &__search:hover {
+    background-image: url("../img/user-link/search-black.png");
+  }
+}
