@@ -1,56 +1,57 @@
 <div class="user-links">
-  <a class="user-links__item user-links__item--search" href="#">
-    <svg class="user-links__svg" width="17px" height="18px">
-      <use xlink:href="#icon-loupe"></use>
-    </svg>
-    <span class="visually-hidden">Поиск</span>
-    <div class="user-links__modal">
-      <form class="user-links__form">
-        <p>
-          <label class="visually-hidden" for="search">Логин</label>
-          <input id="search" type="search" name="q" placeholder="Что ищем?">
-        </p>
-      </form>
-    </div>
-  </a>
-  <a class="user-links__item user-links__item--login" href="#">
-    <svg class="user-links__svg" width="20px" height="19px">
-      <use xlink:href="#icon-login"></use>
-    </svg>
-    <span>Вход</span>
-    <div class="user-links__modal">
-      <form class="user-links__form">
-        <p>
-          <label class="visually-hidden" for="user-login">Логин</label>
-          <input class="login-icon-user" id="user-login" type="text" name="login" placeholder="Логин">
-        </p>
-        <p>
-          <label class="visually-hidden" for="user-password">Пароль</label>
-          <input class="login-icon-password" id="user-password" type="password" name="password" placeholder="Пароль">
-        </p>
-      </form>
-    </div>
-    <!--<form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-      <p>
-        <label class="visually-hidden" for="user-password">Пароль</label>
-        <input class="login-icon-password" id="user-password" type="password" name="password" placeholder="Пароль">
-      </p>
-      <p class="login-help">
-        <label class="login-checkbox">
-          <input type="checkbox" name="remember" class="visually-hidden">
-          <span class="checkbox-indicator"></span>
-          Запомните меня
-        </label>
-        <a class="restore" href="#">Я забыл пароль!</a>
-      </p>
-      <button class="button" type="submit">Войти</button>
-    </form>-->
-
-  </a>
-  <a class="user-links__item user-links__item--basket" href="#">
-    <svg class="user-links__svg" width="21px" height="20px">
-      <use xlink:href="#icon-basket"></use>
-    </svg>
-    <span>Корзина</span>
-  </a>
+  <ul class="user-links__list">
+    <li class="user-links__item user-links__item--search">
+      <a href="#">
+        <svg class="user-links__svg" width="17px" height="18px">
+          <use xlink:href="#icon-loupe"></use>
+        </svg>
+        <span class="visually-hidden">Поиск</span>
+      </a>
+      <div class="user-links__modal">
+        <form class="user-links__form user-links__form--search" action="#" method="post">
+          <p>
+            <input id="search" type="search" name="q" placeholder="Что ищем?" aria-labelledby="Что ищем?">
+            <label for="search">Что ищем?</label>
+          </p>
+        </form>
+      </div>
+    </li>
+    <li class="user-links__item user-links__item--login">
+      <a href="#">
+        <svg class="user-links__svg" width="20px" height="19px">
+          <use xlink:href="#icon-login"></use>
+        </svg>
+        Вход
+      </a>
+      <div class="user-links__modal">
+        <form class="user-links__form user-links__form--login" action="#" method="post">
+          <p>
+            <input class="login-icon-user" id="user-login" type="text" name="login" placeholder="Логин">
+            <label for="user-login">Логин</label>
+          </p>
+          <p>
+            <input class="login-icon-password" id="user-password" type="password" name="password" placeholder="Пароль">
+            <label for="user-password">Пароль</label>
+          </p>
+          <button class="button button--red" type="submit">Войти</button>
+          <ul>
+            <li>
+              <a href="#">Забыли пароль?</a>
+            </li>
+            <li>
+              <a href="#">Новая регистрация</a>
+            </li>
+          </ul>
+        </form>
+      </div>
+    </li>
+    <li class="user-links__item user-links__item--basket">
+      <a href="#">
+        <svg class="user-links__svg" width="21px" height="20px">
+          <use xlink:href="#icon-basket"></use>
+        </svg>
+        Корзина
+      </a>
+    </li>
+  </ul>
 </div>
