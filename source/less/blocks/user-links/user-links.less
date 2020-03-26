@@ -94,6 +94,10 @@
   transition: @transition;
 }
 
+.user-links__form input::placeholder {
+  font: inherit;
+  transition: opacity 0.3s ease;
+}
 .user-links__item:hover > a,
 .user-links__item:focus-within > a {
   background-color: rgba(255, 255, 255, 1);
@@ -117,6 +121,10 @@
   box-shadow: 0 0 0 1px #9a9a9a;
   /*border: 1px solid #9a9a9a;*/
   outline: none;
+}
+
+.user-links__form input:focus::placeholder {
+  color: transparent;
 }
 
 .user-links__form input:focus + label  {
