@@ -1,0 +1,63 @@
+<div class="user-navigation">
+  <ul class="user-navigation__list">
+    <li class="user-navigation__item">
+      <a class="user-navigation__link user-navigation__link--search" href="#">
+        <svg class="user-navigation__svg" width="17px" height="18px">
+          <use xlink:href="#icon-loupe"></use>
+        </svg>
+        <span class="visually-hidden">Поиск</span>
+      </a>
+      <div class="user-navigation__modal">
+        <form class="user-navigation__form user-navigation__form--search" action="#" method="post">
+          <p>
+            <input id="search" type="search" name="search" placeholder="Что ищем?">
+            <label for="search">Что ищем?</label>
+          </p>
+        </form>
+      </div>
+    </li>
+    <li class="user-navigation__item">
+      <a class="user-navigation__link" href="#">
+        <svg class="user-navigation__svg" width="20px" height="19px">
+          <use xlink:href="#icon-login"></use>
+        </svg>
+        Вход
+      </a>
+      <div class="user-navigation__modal">
+        <form class="user-navigation__form user-navigation__form--login" action="#" method="post">
+          <p>
+            <input id="user-login" type="text" name="login" placeholder="Логин">
+            <label for="user-login">Логин</label>
+          </p>
+          <p>
+            <input id="user-password" type="password" name="password" placeholder="Пароль">
+            <label for="user-password">Пароль</label>
+          </p>
+          <button class="button button--red" type="submit">Войти</button>
+          <ul class="user-navigation__links-list">
+            <li>
+              <a class="page__link page__link--dark" href="#">Забыли пароль?</a>
+            </li>
+            <li>
+              <a class="page__link page__link--dark" href="#">Новая регистрация</a>
+            </li>
+          </ul>
+        </form>
+      </div>
+    </li>
+    <li class="user-navigation__item user-navigation__item--basket-not-empty">
+      <a class="user-navigation__link" href="#">
+        <svg class="user-navigation__svg" width="21px" height="20px">
+          <use xlink:href="#icon-basket"></use>
+        </svg>
+        <svg class="user-navigation__svg-basket-not-empty" width="21px" height="20px">
+          <use xlink:href="#icon-basket-red"></use>
+        </svg>
+        2 товара
+      </a>
+      <div class="user-navigation__modal-basket">
+        <include src="./source/less/blocks/basket/basket.html"></include>
+      </div>
+    </li>
+  </ul>
+</div>

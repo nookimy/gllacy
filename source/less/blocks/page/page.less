@@ -1,0 +1,30 @@
+.page__link {
+  display: inline-flex;
+  .normal-font(13px);
+  line-height: 1;
+  border-bottom: 1px solid;
+
+  &--dark {
+    color: #323232;
+    border-color: rgba(#323232, 0.3);
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: @orange;
+      border-color: rgba(@orange, 0.3);
+    }
+  }
+
+  &--light {
+    color: @light;
+    border-color: rgba(@light, 0.3);
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: @orange-light;
+      border-color: rgba(@orange-light, 0.3);
+    }
+  }
+}
