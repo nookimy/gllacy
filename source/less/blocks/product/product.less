@@ -1,7 +1,50 @@
 .product {
+  &__img {
+    .mp();
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
 
+  &__quantity {
+     display: inline-block;
+     position: relative;
+     padding-right: 1em;
+
+     &::after {
+       display: inline-block;
+       position: absolute;
+       content: "кг";
+     }
+  }
+
+  &__price {
+    display: inline-block;
+    position: relative;
+    padding-right: 2em;
+    color: @gray;
+
+    &::after {
+      display: inline-block;
+      position: absolute;
+      content: "руб.";
+    }
+  }
+
+  &__cost {
+    display: inline-block;
+    position: relative;
+    padding-right: 2em;
+
+    &::after {
+      display: inline-block;
+      position: absolute;
+      content: "руб.";
+    }
+  }
 }
 
 .basket__table .product{
-  font-size: ;
+  font-size: 1.3rem;
 }

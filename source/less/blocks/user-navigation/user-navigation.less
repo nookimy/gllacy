@@ -23,6 +23,7 @@
   color: @light;
   padding: 0 1.5rem;
   border-radius: 1em;
+  transition: @transition;
 }
 
 .user-navigation__svg {
@@ -47,12 +48,12 @@
 
 .user-navigation__modal,
 .user-navigation__modal-basket {
+  display: none;
   position: absolute;
   top: 32px;
   right: 0;
   padding-top: 5px;
 }
-
 .user-navigation__form {
   display: flex;
   justify-content: space-between;
@@ -163,5 +164,10 @@
 
 .user-navigation__item:hover .user-navigation__modal,
 .user-navigation__item:focus-within .user-navigation__modal {
+  display: block;
+}
+
+.user-navigation__item--basket-not-empty:hover .user-navigation__modal-basket,
+.user-navigation__item--basket-not-empty:focus-within .user-navigation__modal-basket {
   display: block;
 }

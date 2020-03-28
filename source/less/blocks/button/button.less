@@ -1,12 +1,14 @@
 .button {
   .btn-reset();
   display: inline-flex;
-  border-radius: 1.8rem;
-  .normal-font(18px);
+  border-radius: 1.3em;
+  font: inherit;
+  font-size: 1.8rem;
   font-weight: 700;
-  padding: 0.7rem 1.5rem;
+  padding: 1.22rem 1.5rem;
 
   &--red {
+    color: @light;
     background-color: @orange;
     background-image: linear-gradient(to top,#ca3824 0%,#f26843 100%);
     box-shadow: 0 2px 2px 0 rgba(85,8,0,.54);

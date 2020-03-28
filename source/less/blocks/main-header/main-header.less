@@ -1,7 +1,32 @@
 .main-header {
-  padding-top: 10px;
+  &__wrap {
+    .container();
+    position: relative;
+    padding-top: 10px;
+  }
 
   &_logo {
     margin-right: 25px;
   }
+
+  &__contacts {
+    position: absolute;
+    top: 75px;
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  &__contacts-mode {
+    font-size: 1.4rem;
+  }
+
+  &__contacts-phone {
+    font-size: 2.2rem;
+    font-weight: 700;
+  }
 }
+
+
+

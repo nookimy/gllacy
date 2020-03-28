@@ -1,7 +1,8 @@
 <div class="basket">
   <h2 class="visually-hidden">Корзина</h2>
   <table class="basket__table">
-    <caption>Перечень продуктов</caption>
+    <caption class="visually-hidden">Перечень продуктов</caption>
+    <thead class="visually-hidden">
     <tr>
       <th></th>
       <th>Изображение</th>
@@ -9,24 +10,54 @@
       <th>Количество</th>
       <th>Стоимость</th>
     </tr>
+    </thead>
     <tr class="product">
-      <td>
-        <button>Удалить</button>
+      <td class="basket__table-col1">
+        <button class="basket__btn-close" aria-label="Удалить из корзины">
+          <svg width="11px" height="11px">
+            <use xlink:href="#icon-cross-small"></use>
+          </svg>
+        </button>
       </td>
-      <td>
-        <figure class="product__img">
-          <img src="img/basket/creamy-orange-33.jpeg">
-        </figure>
+      <td class="basket__table-col2">
+        <div class="product__img">
+          <img src="img/basket/creamy-orange-33.jpeg" width="33px">
+        </div>
       </td>
-      <td>
+      <td class="basket__table-col3">
         Пломбир с апельсиновым джемом
       </td>
-      <td>
-        1,5 кг x 200 руб.
+      <td class="basket__table-col4">
+        <span class="product__quantity">1,5</span> x <span class="product__price">200</span>
       </td>
-      <td>
-        300 руб.
+      <td class="basket__table-col5">
+        <span class="product__cost">300</span>
+      </td>
+    </tr>
+    <tr class="product">
+      <td class="basket__table-col1">
+        <button class="basket__btn-close" aria-label="Удалить из корзины">
+          <svg width="11px" height="11px">
+            <use xlink:href="#icon-cross-small"></use>
+          </svg>
+        </button>
+      </td>
+      <td class="basket__table-col2">
+        <div class="product__img">
+          <img src="img/basket/creamy-straw-33.jpeg" width="33px">
+        </div>
+      </td>
+      <td class="basket__table-col3">
+        Клубничный пломбир с присыпкой из белого шоколада
+      </td>
+      <td class="basket__table-col4">
+        <span class="product__quantity">1,5</span> x <span class="product__price">300</span>
+      </td>
+      <td class="basket__table-col5">
+        <span class="product__cost">450</span>
       </td>
     </tr>
   </table>
+  <p class="basket__total-cost">Итого: <span>750 руб.</span></p>
+  <button class="button button--red" type="submit">Оформить заказ</button>
 </div>
