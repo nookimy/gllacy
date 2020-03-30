@@ -506,31 +506,36 @@ a {
   border-radius: 1.3em;
   font: inherit;
   font-size: 1.8rem;
-  font-weight: 700;
+  font-weight: 600;
   padding: 1.22rem 1.5rem;
 }
 .button--red {
   color: #ffffff;
-  background-color: #e84d37;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#ca3824), to(#f26843));
-  background-image: linear-gradient(to top, #ca3824 0%, #f26843 100%);
-  -webkit-box-shadow: 0 2px 2px 0 rgba(85, 8, 0, 0.54);
-          box-shadow: 0 2px 2px 0 rgba(85, 8, 0, 0.54);
-  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+  background: #f26843;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f26843), to(#e74a35));
+  background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+  -webkit-box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+          box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
 }
 .button--red:hover,
 .button--red:focus {
-  background-image: none;
-  background-color: #f38166;
-  -webkit-box-shadow: 0 1px 2px 0 #ac1000;
-          box-shadow: 0 1px 2px 0 #ac1000;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f58669), to(#ec6f5e));
+  background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+  -webkit-box-shadow: 0 2px 2px #ac1000;
+          box-shadow: 0 2px 2px #ac1000;
   outline: none;
 }
 .button--red:active {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#f26843), to(#e74a35));
-  background-image: linear-gradient(to top, #f26843 0%, #e74a35 100%);
-  -webkit-box-shadow: inset 0 2px 2px 0 #942718;
-          box-shadow: inset 0 2px 2px 0 #942718;
+  background: -webkit-gradient(linear, left top, left bottom, from(#d84732), to(#e1613e));
+  background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
+  -webkit-box-shadow: inset 0 2px 2px #ac1000;
+          box-shadow: inset 0 2px 2px #ac1000;
+}
+.button--big {
+  font-size: 3.1rem;
+  padding: 1.2rem 4.4rem;
+  border-radius: 5rem;
 }
 .main-header__wrap {
   width: 100%;
@@ -565,6 +570,11 @@ a {
 .main-header__contacts-phone {
   font-size: 2.2rem;
   font-weight: 700;
+}
+.index-page .main-header {
+  position: absolute;
+  width: 100%;
+  z-index: 100;
 }
 .main-navigation {
   display: -webkit-box;
@@ -763,6 +773,7 @@ a {
   top: 32px;
   right: 0;
   padding-top: 5px;
+  z-index: 10;
 }
 .user-navigation__form {
   display: -webkit-box;
@@ -995,6 +1006,78 @@ a {
   border-radius: 5px;
   -webkit-box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
           box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+}
+.slider__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.slider__item {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 880px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 282px;
+}
+.slider__title {
+  margin: 0;
+  padding: 0;
+  font-size: 60px;
+  line-height: 60px;
+  margin-bottom: 27px;
+  font-weight: 800;
+  text-align: center;
+  width: 700px;
+}
+.slider__img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  max-height: 100%;
+  max-width: 100%;
+  z-index: -10;
+}
+.slider__list .owl-dots {
+  position: absolute;
+  bottom: 290px;
+  left: 50%;
+  -webkit-transform: translate(-575px, 0);
+          transform: translate(-575px, 0);
+}
+.slider__list.owl-theme .owl-dots .owl-dot span {
+  width: 21px;
+  height: 21px;
+  border: 2px solid #ffffff;
+  background: transparent;
+}
+.slider__list.owl-theme .owl-dots .owl-dot:hover span,
+.slider__list.owl-theme .owl-dots .owl-dot:focus span {
+  background: rgba(248, 247, 244, 0.4);
+}
+.slider__list.owl-theme .owl-dots .owl-dot.active span {
+  background: #ffffff;
+}
+.slider__list.owl-theme .owl-dots .owl-dot {
+  outline: none;
 }
 .product__img {
   margin: 0;
