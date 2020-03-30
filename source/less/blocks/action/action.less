@@ -34,7 +34,8 @@
     margin-top: auto;
   }
 
-  &__link:hover ~ .promo__item-blur {
+  &__link:hover ~ .promo__item-blur,
+  &__link:focus ~ .promo__item-blur{
     background: rgba(@dark, 0.2);
     backdrop-filter: blur(5px);
   }

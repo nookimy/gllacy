@@ -465,33 +465,38 @@ a {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  font-size: 13px;
-  line-height: 1.2;
-  font-weight: 400;
-  font-family: "Roboto", Arial, sans-serif;
-  font-style: normal;
-  line-height: 1;
-  border-bottom: 1px solid;
+  font-size: 1.3rem;
+  text-decoration: underline;
+  -webkit-text-decoration-color: rgba(50, 50, 50, 0.3);
+          text-decoration-color: rgba(50, 50, 50, 0.3);
 }
 .page__link--dark {
   color: #323232;
-  border-color: rgba(50, 50, 50, 0.3);
+  -webkit-text-decoration-color: rgba(50, 50, 50, 0.3);
+          text-decoration-color: rgba(50, 50, 50, 0.3);
 }
 .page__link--dark:hover,
 .page__link--dark:focus,
 .page__link--dark:active {
   color: #e84d37;
-  border-color: rgba(232, 77, 55, 0.3);
+  -webkit-text-decoration-color: rgba(232, 77, 55, 0.3);
+          text-decoration-color: rgba(232, 77, 55, 0.3);
 }
 .page__link--light {
   color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.3);
+  -webkit-text-decoration-color: rgba(255, 255, 255, 0.3);
+          text-decoration-color: rgba(255, 255, 255, 0.3);
 }
 .page__link--light:hover,
 .page__link--light:focus,
 .page__link--light:active {
   color: #FFBC9E;
-  border-color: rgba(255, 188, 158, 0.3);
+  -webkit-text-decoration-color: rgba(255, 188, 158, 0.3);
+          text-decoration-color: rgba(255, 188, 158, 0.3);
+}
+.catalog .page__link {
+  font-size: 1.6rem;
+  text-align: center;
 }
 .button {
   padding: 0;
@@ -1091,8 +1096,9 @@ a {
   padding-left: 30px;
   padding-right: 30px;
   position: relative;
-  margin-top: -235px;
+  margin-top: -230px;
   z-index: 10;
+  margin-bottom: 40px;
 }
 .promo__list {
   margin: 0;
@@ -1173,18 +1179,87 @@ a {
       align-self: flex-end;
   margin-top: auto;
 }
-.promo .action__link:hover ~ .promo__item-blur {
+.promo .action__link:hover ~ .promo__item-blur,
+.promo .action__link:focus ~ .promo__item-blur {
   background: rgba(0, 0, 0, 0.2);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
 }
-.product__img {
+.hits {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.catalog__list {
   margin: 0;
   padding: 0;
-  width: 33px;
-  height: 33px;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.catalog__item {
+  width: 267px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.catalog__item:hover,
+.catalog__item:focus {
+  background-color: rgba(248, 247, 244, 0.2);
+  -webkit-box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+          box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+}
+.catalog__item:hover .product__link,
+.catalog__item:focus .product__link {
+  display: block;
+}
+.product__img {
+  position: relative;
+  margin: 0;
+  padding: 0;
   border-radius: 50%;
   overflow: hidden;
+}
+.product__img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  max-height: 100%;
+  max-width: 100%;
+}
+.product__price {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: inline-block;
+}
+.product__price::after {
+  display: inline-block;
+  position: absolute;
+}
+.product__title {
+  margin: 0;
+  padding: 0;
 }
 .product__quantity {
   display: inline-block;
@@ -1196,27 +1271,57 @@ a {
   position: absolute;
   content: "кг";
 }
-.product__price {
+.product__link {
+  display: none;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin-top: 20px;
+}
+.product__cost {
+  padding-right: 2em;
+}
+.basket__table .product {
+  font-size: 1.3rem;
+}
+.basket__table .product__img {
+  width: 33px;
+  height: 33px;
+}
+.basket__table .product__price {
   display: inline-block;
   position: relative;
   padding-right: 2em;
   color: #696969;
 }
-.product__price::after {
-  display: inline-block;
-  position: absolute;
+.basket__table .product__price::after {
   content: "руб.";
 }
-.product__cost {
-  display: inline-block;
-  position: relative;
-  padding-right: 2em;
-}
-.product__cost::after {
-  display: inline-block;
-  position: absolute;
-  content: "руб.";
-}
-.basket__table .product {
+.basket__table .product__title {
+  font-weight: 400;
   font-size: 1.3rem;
+}
+.basket__table .product__title a:hover {
+  color: #e84d37;
+  text-decoration: underline;
+}
+.catalog .product {
+  position: relative;
+  padding-bottom: 20px;
+}
+.catalog .product__img {
+  width: 267px;
+  height: 267px;
+}
+.catalog .product__price {
+  font-size: 4.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+  margin-top: -70px;
+  margin-bottom: 25px;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+}
+.catalog .product__price::after {
+  content: "₽/кг";
 }

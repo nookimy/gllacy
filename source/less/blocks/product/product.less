@@ -1,22 +1,64 @@
 .product {
   &__img {
+    position: relative;
     .mp();
-    width: 33px;
-    height: 33px;
     border-radius: 50%;
     overflow: hidden;
+
+    & img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-height: 100%;
+      max-width: 100%;
+    }
+  }
+
+  &__price {
+    .mp();
+    position: relative;
+    display: inline-block;
+
+    &::after {
+      display: inline-block;
+      position: absolute;
+    }
+  }
+
+  &__title {
+    .mp();
   }
 
   &__quantity {
-     display: inline-block;
-     position: relative;
-     padding-right: 1em;
+    display: inline-block;
+    position: relative;
+    padding-right: 1em;
 
-     &::after {
-       display: inline-block;
-       position: absolute;
-       content: "кг";
-     }
+    &::after {
+     display: inline-block;
+     position: absolute;
+     content: "кг";
+    }
+  }
+
+  &__link {
+    display: none;
+    align-self: center;
+    margin-top: 20px;
+  }
+
+  &__cost {
+    padding-right: 2em;
+  }
+}
+
+.basket__table .product{
+  font-size: 1.3rem;
+
+  &__img {
+    width: 33px;
+    height: 33px;
   }
 
   &__price {
@@ -26,25 +68,43 @@
     color: @gray;
 
     &::after {
-      display: inline-block;
-      position: absolute;
       content: "руб.";
     }
   }
 
-  &__cost {
-    display: inline-block;
-    position: relative;
-    padding-right: 2em;
+  &__title {
+    font-weight: 400;
+    font-size: 1.3rem;
+  }
+
+  &__title a:hover {
+    color: @orange;
+    text-decoration: underline;
+  }
+}
+
+.catalog .product {
+  position: relative;
+  padding-bottom: 20px;
+  &__img {
+    width: 267px;
+    height: 267px;
+  }
+
+  &__price {
+    font-size: 4.5rem;
+    font-weight: bold;
+    color: @light;
+    text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+    margin-top: -70px;
+    margin-bottom: 25px;
+    align-self: stretch;
 
     &::after {
-      display: inline-block;
-      position: absolute;
-      content: "руб.";
+      content: "₽/кг";
     }
   }
 }
 
-.basket__table .product{
-  font-size: 1.3rem;
-}
+
+
