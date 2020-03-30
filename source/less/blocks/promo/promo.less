@@ -1,0 +1,47 @@
+.promo {
+  .container();
+  position: relative;
+  margin-top: -235px;
+  z-index: 10;
+
+  &__list {
+    .list();
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+  }
+
+  &__item {
+    position: relative;
+    width: 560px;
+    min-height: 230px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: inherit;
+    border-radius: 10px;
+    padding: 20px;
+    overflow: hidden;
+
+    &--raspberry {
+      background-color: #752a3a;
+      background-image: url("../img/promo/bg-raspberry.jpg");
+    }
+
+    &--chocolate {
+      background-color: #4a3024;
+      background-image: url("../img/promo/bg-chocolate.jpg");
+    }
+  }
+
+  &__item-blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: none;
+    background: none;
+    transition: @transition;
+  }
+}

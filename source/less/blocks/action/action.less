@@ -1,0 +1,41 @@
+.action {
+
+}
+
+.promo .action {
+  display: flex;
+  flex-direction: column;
+
+  &__title,
+  &__description,
+  &__link {
+    z-index: 10;
+  }
+  &__title {
+    .mp();
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+
+  }
+
+  &__description {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+
+  &__description p {
+    .mp();
+    margin-bottom: 5px;
+  }
+
+  &__link {
+    align-self: flex-end;
+    margin-top: auto;
+  }
+
+  &__link:hover ~ .promo__item-blur {
+    background: rgba(@dark, 0.2);
+    backdrop-filter: blur(5px);
+  }
+}
