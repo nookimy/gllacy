@@ -1,0 +1,63 @@
+.features {
+  .container();
+  width: 1145px;
+  background-color: #e2d5bb;
+  color: @gray-dark;
+  padding: 20px 20px 20px;
+  border-radius: 15px;
+  margin-bottom: 40px;
+  background-image: url("../img/features/bg-waffle.jpeg");
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+
+.features__description {
+  .mp();
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+.features__list {
+  .list();
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 1.6rem;
+}
+
+.features__item {
+  position: relative;
+  width: 540px;
+  margin-top: 10px;
+  padding-left: 55px;
+  padding-top: 19px;
+}
+
+.features__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 49px;
+  height: 49px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.features__item--ice-cream::before {
+  background-image: url("../img/features/ice-cream.svg");
+}
+
+.features__item--cow:before {
+  background-image: url("../img/features/cow.svg");
+}
+
+.features__item--eco:before {
+  background-image: url("../img/features/eco.svg");
+}
+
+.features__item--thermometer:before {
+  background-image: url("../img/features/thermometer.svg");
+}
+
+
