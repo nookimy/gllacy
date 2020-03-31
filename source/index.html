@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUy-CMtDolaGcg2V7TZuAGB1jlPF49r54"></script>
 
   </head>
   <body class="page index-page">
@@ -20,8 +21,10 @@
       <include src="./source/less/blocks/promo/promo.html"></include>
       <include src="./source/less/blocks/hits/hits.html"></include>
       <include src="./source/less/blocks/features/features.html"></include>
-      <include src="./source/less/blocks/blog/blog.html"></include>
-      <include src="./source/less/blocks/subscription/subscription.html"></include>
+      <div class="page__wrap page__wrap--post-subscription">
+        <include src="./source/less/blocks/blog/blog.html"></include>
+        <include src="./source/less/blocks/subscription/subscription.html"></include>
+      </div>
       <include src="./source/less/blocks/contacts/contacts.html"></include>
     </main>
     <include src="./source/less/blocks/main-footer/main-footer.html"></include>

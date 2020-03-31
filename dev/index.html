@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUy-CMtDolaGcg2V7TZuAGB1jlPF49r54"></script>
 
   </head>
   <body class="page index-page">
@@ -357,25 +358,43 @@
   </ul>
 </section>
 
-      <section class="blog">
+      <div class="page__wrap page__wrap--post-subscription">
+        <article class="blog">
   <h2 class="blog__title">Новое в нашем блоге</h2>
-  <article class="article">
-    <img src="http://placehold.it/560x220" width="560" height="220" alt="Фруктовый щербет">
-    <a><h3>10 способов сервировки фруктовых щербетов к столу</h3></a>
-  </article>
+  <div class="post">
+    <h3 class="post__title"><a class="page__link page__link--dark" href="#">10 способов сервировки фруктовых щербетов к столу</a></h3>
+  </div>
+</article>
+
+        <section class="subscription">
+  <div class="subscription__wrap">
+    <h2 class="visually-hidden">Подписаться на рассылку</h2>
+    <div class="subscription__description">
+      <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+    </div>
+    <form class="subscription__form" action="#" method="post">
+      <p>
+        <input id="subscription-email" type="email" name="email" placeholder="Электронная почта">
+        <label for="subscription-email">Электронная почта</label>
+      </p>
+      <button class="button button--red" type="submit">Отправить</button>
+    </form>
+  </div>
 </section>
 
-      <section class="subscription">
-  <h2 class="subscription__title">Подписаться на рассылку</h2>
-  <p class="subscription__description">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-  <!-- Здесь будет форма -->
-</section>
-
-      <section class="contacts">
-  <h2 class="contacts__title">Наши контакты</h2>
-  <p>Адрес главного офиса и офлайн-магазина: ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
-  <p>Для заказов по телефону: <a href="tel:+78124502525">8 812 450-25-25</a> (с 10 до 20 ежедневно)</p>
-  <a class="contacts__link">Форма обратной связи</a>
+      </div>
+      <div class="map" id="map">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5944154464316!2d30.320848316070613!3d59.93887198187624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTnCsDU2JzE5LjkiTiAzMMKwMTknMjIuOSJF!5e0!3m2!1sru!2sru!4v1585660286341!5m2!1sru!2sru" width="100%" height="430" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+</div>
+<section class="contacts">
+  <h2 class="visually-hidden">Наши контакты</h2>
+  <div class="page__wrap page__wrap--contacts">
+    <div class="contacts__description">
+      <p>Адрес главного офиса и офлайн-магазина: <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b></p>
+      <p>Для заказов по телефону: <a class="contacts__tel-link" href="tel:+78124502525">8 812 450-25-25</a> (с 10 до 20 ежедневно)</p>
+      <a class="button button--red contacts__feedback">Форма обратной связи</a>
+    </div>
+  </div>
 </section>
 
     </main>

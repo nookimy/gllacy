@@ -63,6 +63,7 @@
   background-color: @gray-lighter;
   border-radius: 5px;
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+  transition: @transition;
 
   &--search {
     width: 350px;
@@ -78,6 +79,7 @@
   position: relative;
   flex-grow: 1;
   margin-bottom: 20px;
+  transition: @transition;
 
   &:last-child {
     margin-bottom: 0;
@@ -86,12 +88,13 @@
 
 .user-navigation__form label {
   position: absolute;
-  top: -20px;
+  top: -17px;
   left: 0;
   font: inherit;
   font-size: 12px;
   color: #999999;
   opacity: 0;
+  transition: @transition;
 }
 
 .user-navigation__form input {
@@ -102,12 +105,14 @@
   border-radius: 5px;
   padding: 10px 10px;
   width: 100%;
+  transition: @transition;
 }
 
 .user-navigation__form input::placeholder {
   font: inherit;
   font-size: 14px;
   color: #999999;
+  transition: @transition;
 }
 
 .user-navigation__links-list {

@@ -1,5 +1,15 @@
 <section class="subscription">
-  <h2 class="subscription__title">Подписаться на рассылку</h2>
-  <p class="subscription__description">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-  <!-- Здесь будет форма -->
+  <div class="subscription__wrap">
+    <h2 class="visually-hidden">Подписаться на рассылку</h2>
+    <div class="subscription__description">
+      <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+    </div>
+    <form class="subscription__form" action="#" method="post">
+      <p>
+        <input id="subscription-email" type="email" name="email" placeholder="Электронная почта">
+        <label for="subscription-email">Электронная почта</label>
+      </p>
+      <button class="button button--red" type="submit">Отправить</button>
+    </form>
+  </div>
 </section>

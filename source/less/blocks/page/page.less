@@ -1,8 +1,26 @@
+.page__wrap {
+  .container();
+
+  &--post-subscription {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+
+  &--contacts {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+  }
+}
 .page__link {
   display: inline-flex;
   font-size: 1.3rem;
   text-decoration: underline;
   text-decoration-color: rgba(50, 50, 50, 0.3);
+  transition: @transition;
 
   &--dark {
     color: @gray-dark;
@@ -32,4 +50,22 @@
 .catalog .page__link {
   font-size: 1.6rem;
   text-align: center;
+}
+
+.blog .page__link {
+  width: 280px;
+  font-size: 2.4rem;
+  font-weight: 700;
+
+  &--dark {
+    color: @gray-dark;
+    text-decoration-color: rgba(@gray-dark, 1);
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: @orange;
+      text-decoration-color: rgba(@orange, 1);
+    }
+  }
 }
