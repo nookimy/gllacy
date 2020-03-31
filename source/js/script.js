@@ -8,3 +8,7 @@ $(document).ready(function () {
     autoplayHoverPause: false, // не останавливать при наведении
   });
 });
+
+$( ".product--hit" )
+  .parent()
+  .addClass( "catalog__item--hit" );
