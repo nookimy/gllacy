@@ -1,0 +1,45 @@
+.social {
+  .list();
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.social__item {
+  margin-right: 10px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid;
+  border-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+.social__svg {
+  fill: rgba(255, 255, 255);
+}
+
+.social__link:hover,
+.social__link:focus {
+  outline: none;
+  opacity: 1;
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.social__link:active {
+  & .social__svg {
+    fill: rgba(255, 255, 255, 0.7);
+  }
+}
+
+
+
+
+

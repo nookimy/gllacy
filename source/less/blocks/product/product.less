@@ -77,9 +77,13 @@
     font-size: 1.3rem;
   }
 
-  &__title a:hover {
+  &__title a:hover,
+  &__title a:focus,
+  &__title a:active {
+    transition: @transition;
     color: @orange;
     text-decoration: underline;
+    outline: none;
   }
 }
 
