@@ -1,0 +1,23 @@
+<div class="modal modal--opened">
+  <p class="modal__title">Мы обязательно вам ответим!</p>
+  <form class="form modal__form" action="#" method="post">
+    <p>
+      <input class="modal__input-name" type="text" id="feedback-name" name="name" placeholder="Как вас зовут?">
+      <label for="feedback-name">Как вас зовут?</label>
+    </p>
+    <p>
+      <input class="modal__input-email" type="text" id="feedback-email" name="email" placeholder="Ваша почта для ответа?">
+      <label for="feedback-email">Ваша почта для ответа?</label>
+    </p>
+    <p>
+      <textarea id="feedback-message" name="message" placeholder="Напишите что-нибудь..." rows="5"></textarea>
+      <label for="feedback-message">Напишите что-нибудь...</label>
+    </p>
+    <button class="button button--red" type="submit">Отправить</button>
+  </form>
+  <button class="modal__button-close" aria-label="Закрыть окно">
+    <svg width="18px" height="17px">
+      <use xlink:href="#icon-crossbig"></use>
+    </svg>
+  </button>
+</div>
