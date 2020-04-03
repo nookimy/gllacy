@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Интернет-магазин</title>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page inner-page">
+<div class="page__modal-cover"></div>
+<div style="display:none"><!--Подключение svg-спрайта-->
+  <include src="source/img/sprite.svg"></include>
+</div>
+<include src="./source/less/blocks/main-header/main-header--inner.html"></include><!--Шапка и блок навигации-->
+<main class="page__main">
+  <div class="page__wrap">
+    <ul class="breadcrumbs">
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="#">Каталог</a></li>
+      <li><a href="#">Сливочное</a></li>
+    </ul>
+    <h1 class="page__title">Сливочное мороженное</h1>
+    <include src="./source/less/blocks/catalog/catalog--inner.html"></include>
+  </div>
+
+</main>
+<include src="./source/less/blocks/main-footer/main-footer.html"></include>
+</body>
+</html>

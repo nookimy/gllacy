@@ -15,7 +15,8 @@
     }
   }
 
-  &__price {
+  &__price,
+  &__cost {
     .mp();
     position: relative;
     display: inline-block;
@@ -44,8 +45,11 @@
 
   &__link {
     display: none;
-    align-self: center;
-    margin-top: 20px;
+    position: absolute;
+    left: 50%;
+    bottom: -70px;
+    width: 200px;
+    transform: translate(-50%, 0);
   }
 
   &__cost {
@@ -72,6 +76,12 @@
     }
   }
 
+  &__cost {
+    &::after {
+      content: "руб.";
+    }
+  }
+
   &__title {
     font-weight: 400;
     font-size: 1.3rem;
@@ -88,16 +98,27 @@
 }
 
 .catalog .product {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: -6px;
-  padding: 6px 10px 20px;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 5px;
   transition: @transition;
 
+  &::before {
+    opacity: 0;
+    content: "";
+    position: absolute;
+    width: 295px;
+    height: 405px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: rgba(248,247,244,.2);
+    box-shadow: 0 20px 20px 0 rgba(0,0,0,.4);
+    border-radius: 5px;
+    z-index: -5;
+  }
 
   &__img {
     width: 267px;
@@ -118,17 +139,40 @@
     }
   }
 
+  &__cost {
+    &::after {
+      content: "₽";
+    }
+  }
+
   &__title a:focus {
     outline: none;
   }
+
+  &:hover {
+    z-index: 10;
+    &::before {
+      transition: @transition;
+      opacity: 1;
+    }
+  }
 }
 
-.catalog__item:hover .product,
-.catalog__item:focus .product {
-  background-color: rgba(248,247,244,.2);
-  box-shadow: 0 20px 20px 0 rgba(0,0,0,.4);
-  border-radius: 5px;
+.catalog .product--hit::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 13px;
+  width: 61px;
+  height: 61px;
+  background-image: url("../img/catalog/hit.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
 
+
+.product:hover,
+.product:focus {
   & .product__link {
     display: block;
   }

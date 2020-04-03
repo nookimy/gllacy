@@ -39,6 +39,17 @@
     }
   }
 
+  &__item--active {
+    & > a {
+      background-color: #D07058;
+      color: @light;
+
+      &:before {
+        display: none;
+      }
+    }
+  }
+
   &__submenu-list {
     position: absolute;
     left: 0;
@@ -50,6 +61,7 @@
     min-width: 145px;
     border-radius: 5px;
     margin-top: 5px;
+    z-index: 10;
   }
 
   &__submenu-item {
@@ -80,6 +92,15 @@
   &__submenu-item {
     & > a:active {
       background-color: rgb(246, 181, 165);
+    }
+  }
+
+  &__submenu-item--active,
+  &__submenu-item--active:hover,
+  &__submenu-item--active:focus {
+    & > a {
+      background-color: #D07058;
+      color: @light;
     }
   }
 

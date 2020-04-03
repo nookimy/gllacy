@@ -1,0 +1,28 @@
+.breadcrumbs {
+  .list();
+  display: inline-flex;
+  max-width: 900px;
+  font-size: 1.4rem;
+  color: @light;
+
+  & > li {
+    position: relative;
+    padding-left: 17px;
+    margin-right: 5px;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:not(:first-child)::before {
+      content: "»";
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}

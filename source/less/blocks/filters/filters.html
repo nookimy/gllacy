@@ -1,0 +1,86 @@
+<form class="filters" action="filter" method="get">
+  <div class="filters__row">
+    <div class="filters__sort-fields">
+      <label class="filters__label">Сортировка:</label>
+      <div class="filters__select-field">
+        <select class="filters__select" name="sort">
+          <option value="popular" selected="">по популярности</option>
+          <option value="сheap">сначала недорогие</option>
+          <option value="expensive">сначала дорогие</option>
+          <option value="fat">по жирности</option>
+        </select>
+        <span class="filters__select-indicator"></span>
+      </div>
+    </div>
+    <div class="filters__price-fields">
+      <div class="filters__price-inputs">
+        <label class="filters__label">Цена:</label>
+        <span class="filters__price-inputs">
+                  <label class="visually-hidden" for="price-min">Стоимость от</label>
+                  <input class="filters__price-input" type="text" id="price-min" value="100"> руб. –
+                  <label class="visually-hidden" for="price-max">Стоимость до</label>
+                  <input class="filters__price-input" type="text" id="price-max" value="500"> руб.
+                </span>
+      </div>
+      <div class="filters__range">
+        <div class="filters__range-scale">
+          <div class="filters__range-value"></div>
+        </div>
+        <span class="filters__range-btn  filters__range-btn_min" tabindex="0"></span>
+        <span class="filters__range-btn  filters__range-btn_max" tabindex="0"></span>
+      </div>
+    </div>
+    <div class="filters__fat-fields">
+      <label class="filters__label">Жирность:</label>
+      <ul class="filters__radio-inputs">
+        <li class="filters__radio-item">
+          <input class="filters__radio" type="radio" name="fat" id="fat-0" value="0%">
+          <label class="filters__radio-label" for="fat-0">0%</label>
+        </li>
+        <li class="filters__radio-item">
+          <input class="filters__radio" type="radio" name="fat" id="fat-10" value="до 10%" checked="">
+          <label class="filters__radio-label" for="fat-10">до 10%</label>
+        </li>
+        <li class="filters__radio-item">
+          <input class="filters__radio" type="radio" name="fat" id="fat-30" value="до 30%">
+          <label class="filters__radio-label" for="fat-30">до 30%</label>
+        </li>
+        <li class="filters__radio-item">
+          <input class="filters__radio" type="radio" name="fat" id="fat-30plus" value="выше 30%">
+          <label class="filters__radio-label" for="fat-30plus">выше 30%</label>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="filters__row">
+    <div class="filters__fillers-fields">
+      <label class="filters__label">Наполнители:</label>
+      <ul class="filters__checkbox-inputs">
+        <li class="filters__checkbox-item">
+          <input class="filters__checkbox" type="checkbox" name="сhocolate" id="сhocolate" value="шоколадные" checked="">
+          <label class="filters__checkbox-label" for="сhocolate">шоколадные</label>
+        </li>
+        <li class="filters__checkbox-item">
+          <input class="filters__checkbox" type="checkbox" name="sugar-flours" id="sugar-flours" value="сахарные присыпки" checked="">
+          <label class="filters__checkbox-label" for="sugar-flours">сахарные присыпки</label>
+        </li>
+        <li class="filters__checkbox-item">
+          <input class="filters__checkbox" type="checkbox" name="fruit" id="fruit" value="фрукты">
+          <label class="filters__checkbox-label" for="fruit">фрукты</label>
+        </li>
+        <li class="filters__checkbox-item">
+          <input class="filters__checkbox" type="checkbox" name="syrups" id="syrups" value="сиропы">
+          <label class="filters__checkbox-label" for="syrups">сиропы</label>
+        </li>
+        <li class="filters__checkbox-item">
+          <input class="filters__checkbox" type="checkbox" name="jams" id="jams" value="джемы">
+          <label class="filters__checkbox-label" for="jams">джемы</label>
+        </li>
+      </ul>
+    </div>
+    <div class="filters__apply-field">
+      <button class="filters__apply  action-btn" type="submit" name="apply-filters">Применить</button>
+    </div>
+  </div>
+</form>
+

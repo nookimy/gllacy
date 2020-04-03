@@ -3,27 +3,13 @@
     .list();
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   &__item {
     position: relative;
     width: 267px;
-    min-height: 315px;
     margin-bottom: 40px;
-    flex-grow: 1;
-  }
-
-  &__item--hit::before {
-    content: "";
-    position: absolute;
-    top: 6px;
-    left: 13px;
-    width: 61px;
-    height: 61px;
-    background-image: url('../img/catalog/hit.svg');
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    z-index: 10;
   }
 
   &__item:hover,
@@ -39,6 +25,13 @@
   display: none;
 }
 
-  .hits .catalog__item--hit:nth-child(-n+4) {
-    display: block;
-  }
+.hits .catalog__item--hit:nth-child(-n+4) {
+  display: block;
+}
+
+
+.inner-page .catalog {
+  .container();
+  padding-right: 0;
+  padding-left: 0;
+}
